@@ -35,6 +35,7 @@ namespace School.WinForm.Views
             tabIndex.TabPages["tabCourses"].Controls.Add(courseSearchUserControl);
             //6. Dock user control for courses as fill.
             courseSearchUserControl.Dock = DockStyle.Fill;
+            //Added Some Message.
 
         }
        

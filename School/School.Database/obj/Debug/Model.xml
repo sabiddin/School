@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="School.Database.dll" />
+			<Metadata Name="FileName" Value="C:\SOURCE\REPOSITORY\SABIDDIN\SCHOOL\SCHOOL\SCHOOL.DATABASE\OBJ\DEBUG\SCHOOL.DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="School.Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Source\Repository\sabiddin\School\School\School.Database\obj\Debug\School.Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[tbl_Department].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tbl_Department]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[tbl_Course].[ID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tbl_Course]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[abid]" Disambiguator="9" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_owner]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[abid]" Disambiguator="9" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_accessadmin]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[abid]" Disambiguator="9" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_securityadmin]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[abid]" Disambiguator="9" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_ddladmin]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[abid]" Disambiguator="9" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_datareader]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[abid]" Disambiguator="9" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_datawriter]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlLogin" Name="[abid]">
+			<Property Name="Password" Value="javbTxlu~q+Upxeunb|kybe`msFT7_&amp;#$!~&lt;dczqwhs,tmai" />
+			<Property Name="DefaultLanguage" Value="us_english" />
+			<Property Name="Sid" Value="0xC4183031A1374D499046F933AFA2876B" />
+			<Property Name="IsCheckExpirationOn" Value="True" />
+			<Annotation Type="GloballyScoped" />
+		</Element>
+		<Element Type="SqlUser" Name="[abid]" Disambiguator="9">
+			<Property Name="LoginIdentifierScript">
+				<Value><![CDATA[[abid]]]></Value>
+			</Property>
+			<Property Name="AuthenticationType" Value="1" />
+			<Relationship Name="Login">
+				<Entry>
+					<References Name="[abid]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblCourse_Delete]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[	
+
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	DELETE FROM tbl_Course 	
+	WHERE ID= @ID;
+		
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Course]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Delete].[@ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Delete].[@ID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="249" />
+				<Property Name="Length" Value="554" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc selects data from tbl_Course&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_tblCourse_Delete]&#xD;&#xA; &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#x9;&#xD;&#xA;    @ID int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblCourse_Get]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	SELECT c.ID,c.CourseNumber ,c.CourseName, c.CourseDescription, c.Credits,d.DepartmentCode, d.DepartmentDescription
+	FROM		tbl_Course c INNER JOIN tbl_Department d ON(c.DepartmentID = d.ID)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Course]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[DepartmentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[Credits]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentDescription]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="249" />
+				<Property Name="Length" Value="676" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc selects data from tbl_Course&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_tblCourse_Get] &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblCourse_GetByCourseName]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	SELECT c.ID,c.CourseNumber ,c.CourseName, c.CourseDescription, c.Credits,d.DepartmentCode, d.DepartmentDescription
+	FROM		tbl_Course c INNER JOIN tbl_Department d ON(c.DepartmentID = d.ID)
+	WHERE c.CourseName like  '%' +@CourseName+'%'
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Course]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[DepartmentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[Credits]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_GetByCourseName].[@CourseName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_GetByCourseName].[@CourseName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="264" />
+				<Property Name="Length" Value="777" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc selects data from tbl_Course by course name&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_tblCourse_GetByCourseName] &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#xD;&#xA;&#x9;@CourseName VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblCourse_GetByID]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	SELECT ID,CourseNumber ,CourseName, CourseDescription, Credits
+	FROM		tbl_Course WHERE ID=@ID
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Course]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[Credits]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_GetByID].[@ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_GetByID].[@ID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="268" />
+				<Property Name="Length" Value="606" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc selects data from tbl_Course by the provided ID&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE sp_tblCourse_GetByID &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#xD;&#xA;&#x9;@ID int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblCourse_Insert]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	INSERT INTO 
+			tbl_Course(CourseNumber ,CourseName, CourseDescription, Credits,DepartmentID)
+	VALUES
+					(@CourseNumber ,@CourseName, @CourseDescription,@Credits, @DepartmentID)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Course]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[Credits]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[DepartmentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Insert].[@CourseNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Insert].[@CourseName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Insert].[@CourseDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Insert].[@Credits]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Insert].[@DepartmentID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Insert].[@CourseNumber]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Insert].[@CourseName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Insert].[@CourseDescription]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Insert].[@Credits]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Insert].[@DepartmentID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="249" />
+				<Property Name="Length" Value="793" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc inserts data into tbl_Course&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_tblCourse_Insert] &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#xD;&#xA;@CourseNumber VARCHAR(50),&#xD;&#xA;@CourseName VARCHAR(50),&#xD;&#xA;@CourseDescription VARCHAR(50),&#xD;&#xA;@Credits int,&#xD;&#xA;@DepartmentID int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblCourse_Update]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	UPDATE tbl_Course SET CourseNumber = @CourseNumber ,
+						  CourseName = @CourseName,
+						  CourseDescription= @CourseDescription, 
+						  Credits = @Credits,
+						  DepartmentID = @DepartmentID
+	WHERE ID= @ID;
+		
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Course]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Update].[@CourseNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Update].[@CourseName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[CourseDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Update].[@CourseDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[Credits]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Update].[@Credits]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[DepartmentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Update].[@DepartmentID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Course].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblCourse_Update].[@ID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Update].[@ID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Update].[@CourseNumber]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Update].[@CourseName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Update].[@CourseDescription]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Update].[@Credits]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblCourse_Update].[@DepartmentID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="249" />
+				<Property Name="Length" Value="861" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc selects data from tbl_Course&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_tblCourse_Update]&#xD;&#xA; &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#x9;&#xD;&#xA;    @ID int,&#xD;&#xA;&#x9;@CourseNumber varchar(50),&#xD;&#xA;&#x9;@CourseName varchar(50), &#xD;&#xA;&#x9;@CourseDescription varchar(50), &#xD;&#xA;&#x9;@Credits int,&#xD;&#xA;&#x9;@DepartmentID int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblDepartment_Get]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	SELECT ID,DepartmentCode, DepartmentDescription
+	FROM		tbl_Department
+	ORDER BY ID ASC;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Department]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentDescription]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="249" />
+				<Property Name="Length" Value="580" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc selects data from tbl_Course&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_tblDepartment_Get] &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblDepartment_GetByCode]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	SELECT ID,DepartmentCode, DepartmentDescription
+	FROM		tbl_Department
+	WHERE DepartmentCode LIKE '%' +@Code+'%'
+	ORDER BY DepartmentCode ASC;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Department]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[ID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblDepartment_GetByCode].[@Code]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblDepartment_GetByCode].[@Code]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="249" />
+				<Property Name="Length" Value="661" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc selects data from tbl_Course&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_tblDepartment_GetByCode] &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#xD;&#xA;&#x9;@Code varchar(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[sp_tblDepartment_Insert]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;    
+	INSERT INTO 
+			tbl_Department(DepartmentCode ,DepartmentDescription)
+	VALUES
+					(@DepartmentCode ,@DepartmentDescription);
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tbl_Department]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tbl_Department].[DepartmentDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblDepartment_Insert].[@DepartmentCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[sp_tblDepartment_Insert].[@DepartmentDescription]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblDepartment_Insert].[@DepartmentCode]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="3" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_tblDepartment_Insert].[@DepartmentDescription]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="249" />
+				<Property Name="Length" Value="687" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author: Syed Abiddin&gt;&#xD;&#xA;-- Create date: &lt;Create Date: 2/12/2018&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description: This proc inserts data into tbl_Course&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[sp_tblDepartment_Insert] &#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#xD;&#xA;@DepartmentCode VARCHAR(3),&#xD;&#xA;@DepartmentDescription VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[tbl_Course]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Course].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Course].[CourseNumber]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Course].[CourseName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Course].[CourseDescription]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Course].[Credits]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Course].[DepartmentID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="11" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[tbl_Department]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Department].[ID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Department].[DepartmentCode]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="3" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tbl_Department].[DepartmentDescription]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="10" />
+		</Element>
+	</Model>
+</DataSchemaModel>
